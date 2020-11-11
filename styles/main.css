@@ -1,9 +1,14 @@
+:root {
+    --base-color: #F4F4F4;
+    --shiny-grey: rgba(229,229,229,0.8);
+    --animation-duration: 2.0s;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .skeleton_loader_wrapper {
     max-width: 500px;
     min-width: 300px;
@@ -24,15 +29,15 @@ html, body {
 .box {
     background-color: #ccc;
     height: 100px;
-    animation: shine-lines 2s infinite ease-out;
+    animation: shine-lines var(--animation-duration)  infinite ease-out;
     background-size: 600px;
-    background-image: linear-gradient(90deg, #F4F4F4 0px, rgba(229,229,229,0.8)  40px, #F4F4F4 80px);
+    background-image: linear-gradient(90deg, var(--base-color) 0px, var(--shiny-grey)  40px, var(--base-color) 80px);
 }
 .line {
     background-color: #ddd;
     height: 20px;
     margin-top: 10px;
-    animation: shine-lines 2s infinite ease-out;
+    animation: shine-lines var(--animation-duration) infinite ease-out;
     background-size: 600px;
     background-image: linear-gradient(90deg, #F4F4F4 0px, rgba(229,229,229,0.8)  40px, #F4F4F4 80px);
 }
